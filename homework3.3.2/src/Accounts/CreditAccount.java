@@ -31,12 +31,14 @@ public class CreditAccount extends Account {
         if (amount < 0){
             return 0;
         }
-        if (super.amount + amount <= 0) {
+        if (super.amount + amount < 0) {
             super.amount += amount;
             System.out.println("На кредитный счет переведено: " + amount);
         } else{
-            System.out.println("Положительный баланс на кредитном счете запрещен");
-            return  0;
+            int factAmount = -super.amount;
+            super.amount = 0;
+            System.out.println("Кредитный счет возвращен в ноль");
+            return factAmount; // это сколько переведено по факту, тк на кредитке больше 0 не может быть
         }
         return amount;
     }

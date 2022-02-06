@@ -19,7 +19,7 @@ public class Main {
         creditAccount.pay(23);
         checkingAccount.pay(17);
 
-        savingAccount.transfer(creditAccount, 15);
+        savingAccount.transfer(creditAccount, 27);
         creditAccount.transfer(checkingAccount, 52);
         checkingAccount.transfer(savingAccount, 11);
 
