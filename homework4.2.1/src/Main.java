@@ -12,6 +12,7 @@ public class Main {
 
             if (!lift.isValidLevel(level)){
                 System.out.println("Такого этажа нет в доме");
+                continue;
             }
 
             lift.pushFloor(level);
